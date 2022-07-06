@@ -1,0 +1,263 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% baposter Landscape Poster
+% LaTeX Template
+% Version 1.0 (11/06/13)
+%
+% baposter Class Created by:
+% Brian Amberg (baposter@brian-amberg.de)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%-------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%-------------------------------------------------------------------------------------
+
+\documentclass[landscape,a0paper,fontscale=0.285]{baposter} % Adjust the font scale/size here
+
+\usepackage{graphicx} % Required for including images
+\graphicspath{{figures/}} % Directory in which figures are stored
+
+\usepackage{amsmath} % For typesetting math
+\usepackage{amssymb} % Adds new symbols to be used in math mode
+
+\usepackage{booktabs} % Top and bottom rules for tables
+\usepackage{enumitem} % Used to reduce itemize/enumerate spacing
+\usepackage{url}
+\usepackage{multirow}
+
+\usepackage{palatino} % Use the Palatino font
+\usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
+
+\usepackage{multicol} % Required for multiple columns
+\setlength{\columnsep}{1.5em} % Slightly increase the space between columns
+\setlength{\columnseprule}{0mm} % No horizontal rule between columns
+
+\usepackage{tikz} % Required for flow chart
+\usetikzlibrary{shapes,arrows} 
+    % Tikz libraries required for the flow chart in the template
+
+%% Other packages needed for the poster
+\usepackage{enumitem}
+
+\newcommand{\compresslist}{ % Define a command to reduce spacing within itemize/enumerate environments, this is used right after \begin{itemize} or \begin{enumerate}
+\setlength{\itemsep}{1pt}
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}
+}
+
+\definecolor{lightblue}{rgb}{0.145,0.6666,1} 
+      % Defines the color used for content box headers
+
+%%% Other colors needed for the poster.
+%%%
+\definecolor{olive}{rgb}{0.3, 0.4, .1}
+\definecolor{fore}{RGB}{249,242,215}
+\definecolor{back}{RGB}{51,51,51}
+\definecolor{title}{RGB}{255,0,90}
+\definecolor{dgreen}{rgb}{0.,0.6,0.}
+\definecolor{gold}{rgb}{1.,0.84,0.}
+\definecolor{JungleGreen}{cmyk}{0.99,0,0.52,0}
+\definecolor{BlueGreen}{cmyk}{0.85,0,0.33,0}
+\definecolor{RawSienna}{cmyk}{0,0.72,1,0.45}
+\definecolor{Magenta}{cmyk}{0,1,0,0}
+%%%
+
+%%% Symbols needed for dynamical system definitions.
+%%%
+\newcommand{\cals}{\mbox{$\mathcal{S}$}}
+\newcommand{\calc}{\mbox{$\mathcal{C}$}}
+\newcommand{\calcp}{\mbox{$\mathcal{C'}$}}
+
+\newcommand{\bbb}{\mbox{$\mathbb{B}$}}
+\newcommand{\cala}{\mbox{$\mathcal{A}$}}
+\newcommand{\calcdp}{\mbox{$\mathcal{C}^{''}$}}
+\newcommand{\calco}{\mbox{$\mathcal{C}_1$}}
+\newcommand{\calct}{\mbox{$\mathcal{C}_2$}}
+\newcommand{\calcv}{\mbox{$\mathcal{C}_v$}}
+\newcommand{\calf}{\mbox{$\mathcal{F}$}}
+\newcommand{\calp}{\mbox{$\mathcal{P}$}}
+\newcommand{\calso}{\mbox{$\mathcal{S}_1$}}
+
+\newcommand{\cpsp}{\mbox{\textbf{PSPACE}}}
+\newcommand{\ccnp}{\mbox{\textbf{Co-NP}}}
+%%%
+
+
+\begin{document}
+
+\begin{poster}
+{
+columns=3,  %No. of columns
+headerborder=closed, % Adds a border around the header of content boxes
+colspacing=0.8em, % Column spacing
+bgColorOne=white, % Background color for the gradient on the left side of the poster
+bgColorTwo=white, % Background color for the gradient on the right side of the poster
+borderColor=lightblue, % Border color
+headerColorOne=black, % Background color for the header in the content boxes (left side)
+headerColorTwo=lightblue, % Background color for the header in the content boxes (right side)
+headerFontColor=white, % Text color for the header text in the content boxes
+boxColorOne=white, % Background color of the content boxes
+textborder=roundedleft, % Format of the border around content boxes, can be: none, bars, coils, triangles, rectangle, rounded, roundedsmall, roundedright or faded
+eyecatcher=true, % Set to false for ignoring the left logo in the title and move the title left
+headerheight=0.19\textheight, % Height of the header
+headershape=roundedright, % Specify the rounded corner in the content box headers, can be: rectangle, small-rounded, roundedright, roundedleft or rounded
+headerfont=\Large\bf\textsc, % Large, bold and sans serif font in the headers of content boxes
+%textfont={\setlength{\parindent}{1.5em}}, % Uncomment for paragraph indentation
+linewidth=2pt % Width of the border lines around content boxes
+}
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION 
+%----------------------------------------------------------------------------------------
+%
+%{\includegraphics[height=6em]{uva_logo.png}} % First university/lab logo on the left
+% university logos on the left
+{ 
+\begin{tabular}{c}
+%\centering
+\includegraphics[scale=0.2]{uva_logo.png} \\
+%\centering
+% \includegraphics[scale=0.15]{ualbany_logo.png}
+\end{tabular}
+%\end{center}
+}
+{\textbf{CINES: A CyberInfrastructure for Network Engineering and Science}
+            \vspace{0.25em}
+} % Poster title
+{\textcolor{green}{\textbf{Madhav Marathe$\,{}^1$,~
+         Chris J. Kuhlman$\,{}^{1}$,~ Dustin Machi$\,{}^{1}$,~
+         S. S. Ravi$\,{}^{1}$}}\\ \vspace{0.1em} 
+            {$^1$University of Virginia} \\ \vspace{0.25em}
+            \textcolor{magenta}{%\normalsize
+               \textbf{(NSF Cyberinfrastructure for Sustained Scientific Innovation (CSSI) Principal Investigator Meeting,~ July 2022)}}
+            } % Author names and institution
+%{\includegraphics[height=8em]{ualbany_logo.png}} 
+             % Second university/lab logo on the right
+%% Conference logo on the right.
+% {\includegraphics[scale=0.3]{conference_logo.png}} 
+
+\vspace{-2.5in} %%% Remove the gap after the conference name.
+
+%%%% BEGIN  (The main contents of the poster begin here.)
+
+%------------------------------------------------------------------------------------
+%	Motivations
+%------------------------------------------------------------------------------------
+
+\headerbox{Motivations}
+          {name=motive,column=0,row=0}{
+{\small
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+\item Objectives of the project line 1
+\item Objectives of the project line 2
+\item Objectives of the project line 3
+\end{itemize}
+}}
+
+%------------------------------------------------------------------------------------
+%       System Description
+%------------------------------------------------------------------------------------
+
+\headerbox{System Description}
+          {name=system,column=0,row=1,below=motive}{
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+\item A diagram depicting the system components
+\item brief description of the components
+\end{itemize}
+
+}
+
+%------------------------------------------------------------------------------------
+%       Acknowledgments
+%------------------------------------------------------------------------------------
+
+\headerbox{Acknowledgments}
+          {name=Ack,column=0,row=2,below=system}{
+{\footnotesize
+This work was supported by NSF
+Grants ...
+}
+}
+
+%------------------------------------------------------------------------------------
+%       Contact PI
+%------------------------------------------------------------------------------------
+
+\headerbox{Contact Person}
+          {name=Contact,column=0,row=3,below=Ack}{
+{\footnotesize
+{Chris J. Kuhlman~ (\textcolor{green}{\textbf{\texttt{cjk8gx@virginia.edu}}})}
+}}
+
+%%%%%%%%%% End of Column 0 %%%%%%%%%%
+
+
+
+%------------------------------------------------------------------------------------
+%       App Integration
+%------------------------------------------------------------------------------------
+
+\headerbox{Integrating Stand-alone Apps}
+          {name=intApp, column=1,row=0}{
+
+}
+
+%------------------------------------------------------------------------------------
+%       Library Integration
+%------------------------------------------------------------------------------------
+
+\headerbox{Integrating Libraries}
+          {name=intLib,column=1,row=1,below=intApp}{
+          
+
+} 
+
+
+%------------------------------------------------------------------------------------
+%       Containerization
+%------------------------------------------------------------------------------------
+
+\headerbox{Containerization Overview}
+          {name=cont,column=1,row=2,below=intLib}{
+
+}
+
+
+
+%------------------------------------------------------------------------------------
+%       Sciduct
+%------------------------------------------------------------------------------------
+
+\headerbox{Sciduct Overview}
+          {name=sciduct,column=2,row=0}{
+
+}
+
+%------------------------------------------------------------------------------------
+%      Front End
+%------------------------------------------------------------------------------------
+
+\headerbox{Front End Interface}
+          {name=frontend,column=2,row=1,below=sciduct}{
+
+} 
+
+
+%------------------------------------------------------------------------------------
+%       Applications
+%------------------------------------------------------------------------------------
+
+\headerbox{Current Applications}
+          {name=curApps,column=2,row=2, below=frontend}{
+
+} 
+
+
+\end{poster}
+
+\end{document}
