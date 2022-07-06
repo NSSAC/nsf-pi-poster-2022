@@ -121,6 +121,7 @@ linewidth=2pt % Width of the border lines around content boxes
 \begin{tabular}{c}
 %\centering
 \includegraphics[scale=0.2]{uva_logo.png} \\
+% TODO: Add all the logos. Remove names.
 %\centering
 % \includegraphics[scale=0.15]{ualbany_logo.png}
 \end{tabular}
@@ -129,10 +130,11 @@ linewidth=2pt % Width of the border lines around content boxes
 {\textbf{CINES: A CyberInfrastructure for Network Engineering and Science}
             \vspace{0.25em}
 } % Poster title
-{\textcolor{green}{\textbf{Madhav Marathe$\,{}^1$,~
-         Chris J. Kuhlman$\,{}^{1}$,~ Dustin Machi$\,{}^{1}$,~
-         S. S. Ravi$\,{}^{1}$}}\\ \vspace{0.1em} 
-            {$^1$University of Virginia} \\ \vspace{0.25em}
+{
+% \textcolor{green}{\textbf{Madhav Marathe$\,{}^1$,~
+%          Chris J. Kuhlman$\,{}^{1}$,~ Dustin Machi$\,{}^{1}$,~
+%          S. S. Ravi$\,{}^{1}$}}\\ \vspace{0.1em} 
+%             {$^1$University of Virginia} \\ \vspace{0.25em}
             \textcolor{magenta}{%\normalsize
                \textbf{(NSF Cyberinfrastructure for Sustained Scientific Innovation (CSSI) Principal Investigator Meeting,~ July 2022)}}
             } % Author names and institution
@@ -143,11 +145,7 @@ linewidth=2pt % Width of the border lines around content boxes
 
 \vspace{-2.5in} %%% Remove the gap after the conference name.
 
-%%%% BEGIN  (The main contents of the poster begin here.)
-
-%------------------------------------------------------------------------------------
-%	Motivations
-%------------------------------------------------------------------------------------
+%%%%%%%%%% Begin Column 0 %%%%%%%%%%
 
 \headerbox{Motivations}
           {name=motive,column=0,row=0}{
@@ -159,34 +157,26 @@ linewidth=2pt % Width of the border lines around content boxes
 \end{itemize}
 }}
 
-%------------------------------------------------------------------------------------
-%       System Description
-%------------------------------------------------------------------------------------
-
 \headerbox{System Description}
           {name=system,column=0,row=1,below=motive}{
-\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-\item A diagram depicting the system components
-\item brief description of the components
-\end{itemize}
+\includegraphics[scale=0.5]{figures/sys_descr.png}
 
 }
 
-%------------------------------------------------------------------------------------
-%       Acknowledgments
-%------------------------------------------------------------------------------------
+\headerbox{Networks}
+          {name=network,column=0,row=2,below=system}{
+\includegraphics[scale=0.2]{figures/single_net.png}
+\includegraphics[scale=0.3]{figures/multi_net.png}
+
+}
 
 \headerbox{Acknowledgments}
-          {name=Ack,column=0,row=2,below=system}{
+          {name=Ack,column=0,row=2,below=network}{
 {\footnotesize
 This work was supported by NSF
 Grants ...
 }
 }
-
-%------------------------------------------------------------------------------------
-%       Contact PI
-%------------------------------------------------------------------------------------
 
 \headerbox{Contact Person}
           {name=Contact,column=0,row=3,below=Ack}{
@@ -194,66 +184,38 @@ Grants ...
 {Chris J. Kuhlman~ (\textcolor{green}{\textbf{\texttt{cjk8gx@virginia.edu}}})}
 }}
 
-%%%%%%%%%% End of Column 0 %%%%%%%%%%
+%%%%%%%%%% Begin Column 1 %%%%%%%%%%
 
+\headerbox{System Views}
+          {name=sysViews, column=1,row=0}{
 
-
-%------------------------------------------------------------------------------------
-%       App Integration
-%------------------------------------------------------------------------------------
-
-\headerbox{Integrating Stand-alone Apps}
-          {name=intApp, column=1,row=0}{
+\includegraphics[scale=0.2]{figures/CINSArchV7-v02.pdf}
+\includegraphics[scale=0.2]{figures/netsci_ops_v6.pdf}
 
 }
 
-%------------------------------------------------------------------------------------
-%       Library Integration
-%------------------------------------------------------------------------------------
-
-\headerbox{Integrating Libraries}
-          {name=intLib,column=1,row=1,below=intApp}{
+\headerbox{SciDuct}
+          {name=sciduct,column=1,row=1,below=sysViews}{
           
-
+\includegraphics[scale=0.3]{figures/sciduct.png}
 } 
 
-
-%------------------------------------------------------------------------------------
-%       Containerization
-%------------------------------------------------------------------------------------
-
-\headerbox{Containerization Overview}
-          {name=cont,column=1,row=2,below=intLib}{
-
-}
-
-
-
-%------------------------------------------------------------------------------------
-%       Sciduct
-%------------------------------------------------------------------------------------
-
-\headerbox{Sciduct Overview}
-          {name=sciduct,column=2,row=0}{
-
-}
-
-%------------------------------------------------------------------------------------
-%      Front End
-%------------------------------------------------------------------------------------
+%%%%%%%%%% Begin Column 2 %%%%%%%%%%
 
 \headerbox{Front End Interface}
-          {name=frontend,column=2,row=1,below=sciduct}{
+          {name=frontend,column=2,row=0}{
 
 } 
 
+\headerbox{Computational Tasks}
+          {name=tasks,column=2,row=1, below=frontend}{
+- User Applications
+-- CSONNET (Graph Seeding, Plotting)
+-- Structural Analysis
+-- Graph Generation
 
-%------------------------------------------------------------------------------------
-%       Applications
-%------------------------------------------------------------------------------------
-
-\headerbox{Current Applications}
-          {name=curApps,column=2,row=2, below=frontend}{
+- Common Services
+-- Graph Transformation
 
 } 
 
