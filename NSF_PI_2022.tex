@@ -118,17 +118,22 @@ linewidth=2pt % Width of the border lines around content boxes
 %{\includegraphics[height=6em]{uva_logo.png}} % First university/lab logo on the left
 % university logos on the left
 { 
-\begin{tabular}{c}
+\begin{tabular}{c c}
 %\centering
-\includegraphics[scale=0.2]{uva_logo.png} \\
-% TODO: Add all the logos. Remove names.
+\includegraphics[scale=0.1]{logos/uva_logo.png} & \includegraphics[scale=0.2]{logos/losA.png} \\
+\includegraphics[scale=0.2]{logos/jsu.png} &
+\includegraphics[scale=0.2]{logos/kitware.png} \\
+\includegraphics[scale=0.2]{logos/stanford.png} &
+\includegraphics[scale=0.2]{logos/vt.png} \\
+\includegraphics[scale=0.2]{logos/ncatnt.png} &
+\includegraphics[scale=0.2]{logos/iu.png} \\
 %\centering
 % \includegraphics[scale=0.15]{ualbany_logo.png}
 \end{tabular}
 %\end{center}
 }
 {\textbf{CINES: A CyberInfrastructure for Network Engineering and Science}
-            \vspace{0.25em}
+            % \vspace{0.25em}
 } % Poster title
 {
 % \textcolor{green}{\textbf{Madhav Marathe$\,{}^1$,~
@@ -138,7 +143,7 @@ linewidth=2pt % Width of the border lines around content boxes
             \textcolor{magenta}{%\normalsize
                \textbf{(NSF Cyberinfrastructure for Sustained Scientific Innovation (CSSI) Principal Investigator Meeting,~ July 2022)}}
             } % Author names and institution
-%{\includegraphics[height=8em]{ualbany_logo.png}} 
+% {\includegraphics[scale=0.3]{logos/iu.png}} 
              % Second university/lab logo on the right
 %% Conference logo on the right.
 % {\includegraphics[scale=0.3]{conference_logo.png}} 
@@ -204,11 +209,19 @@ Grants ...
 
 \headerbox{Front End Interface}
           {name=frontend,column=2,row=0}{
-
+\includegraphics[scale=0.3]{figures/csonnet-model-seeds.pdf}
+\includegraphics[scale=0.3]{figures/plot_input.pdf}
 } 
 
 \headerbox{Computational Tasks}
           {name=tasks,column=2,row=1, below=frontend}{
+
+\includegraphics[scale=0.3]{figures/astroph_threshold_cs.pdf}
+\includegraphics[scale=0.3]{figures/danville_asym_interaction_100ns_fraction_cum_errorbar.eps}
+\includegraphics[scale=0.3]{figures/danville_no_interaction_100ns_fraction_cum_errorbar.eps}
+\includegraphics[scale=0.3]{figures/g4_timing.pdf}
+\includegraphics[scale=0.3]{figures/scatter_bar_to_ttable.pdf}
+\includegraphics[scale=0.3]{figures/star_trans.pdf}
 - User Applications
 -- CSONNET (Graph Seeding, Plotting)
 -- Structural Analysis
