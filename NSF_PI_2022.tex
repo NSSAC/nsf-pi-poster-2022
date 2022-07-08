@@ -18,7 +18,7 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %-------------------------------------------------------------------------------------
 
-\documentclass[landscape,a0paper,fontscale=0.285]{baposter} % Adjust the font scale/size here
+\documentclass[landscape,paperwidth=70in,paperheight=46in,fontscale=0.225]{baposter} % Adjust the font scale/size here
 
 \usepackage{graphicx} % Required for including images
 \graphicspath{{figures/}} % Directory in which figures are stored
@@ -93,7 +93,7 @@
 
 \begin{poster}
 {
-columns=3,  %No. of columns
+columns=4,  %No. of columns
 headerborder=closed, % Adds a border around the header of content boxes
 colspacing=0.8em, % Column spacing
 bgColorOne=white, % Background color for the gradient on the left side of the poster
@@ -120,13 +120,9 @@ linewidth=2pt % Width of the border lines around content boxes
 { 
 \begin{tabular}{c c}
 %\centering
-\includegraphics[scale=0.1]{logos/uva_logo.png} & \includegraphics[scale=0.2]{logos/losA.png} \\
-\includegraphics[scale=0.2]{logos/jsu.png} &
-\includegraphics[scale=0.2]{logos/kitware.png} \\
-\includegraphics[scale=0.2]{logos/stanford.png} &
-\includegraphics[scale=0.2]{logos/vt.png} \\
-\includegraphics[scale=0.2]{logos/ncatnt.png} &
-\includegraphics[scale=0.2]{logos/iu.png} \\
+\includegraphics[scale=0.2]{logos/uva_logo.png} & \includegraphics[scale=0.4]{logos/losA.png} \\
+\includegraphics[scale=0.4]{logos/jsu.png} &
+\includegraphics[scale=0.4]{logos/kitware.png} \\
 %\centering
 % \includegraphics[scale=0.15]{ualbany_logo.png}
 \end{tabular}
@@ -147,6 +143,18 @@ linewidth=2pt % Width of the border lines around content boxes
              % Second university/lab logo on the right
 %% Conference logo on the right.
 % {\includegraphics[scale=0.3]{conference_logo.png}} 
+{ 
+\begin{tabular}{c c}
+%\centering
+\includegraphics[scale=0.4]{logos/stanford.png} &
+\includegraphics[scale=0.4]{logos/vt.png} \\
+\includegraphics[scale=0.4]{logos/ncatnt.png} &
+\includegraphics[scale=0.4]{logos/iu.png} \\
+%\centering
+% \includegraphics[scale=0.15]{ualbany_logo.png}
+\end{tabular}
+%\end{center}
+}
 
 \vspace{-2.5in} %%% Remove the gap after the conference name.
 
@@ -164,7 +172,7 @@ linewidth=2pt % Width of the border lines around content boxes
 
 \headerbox{System Description}
           {name=system,column=0,row=1,below=motive}{
-\includegraphics[scale=0.5]{figures/sys_descr.png}
+\includegraphics[scale=0.3]{figures/sys_descr.png}
 
 }
 
@@ -194,7 +202,7 @@ Grants ...
 \headerbox{System Views}
           {name=sysViews, column=1,row=0}{
 
-\includegraphics[scale=0.2]{figures/CINSArchV7-v02.pdf}
+\includegraphics[scale=0.2]{figures/CINSArchV7-v02.pdf} \\
 \includegraphics[scale=0.2]{figures/netsci_ops_v6.pdf}
 
 }
@@ -202,26 +210,33 @@ Grants ...
 \headerbox{SciDuct}
           {name=sciduct,column=1,row=1,below=sysViews}{
           
-\includegraphics[scale=0.3]{figures/sciduct.png}
+\includegraphics[scale=0.25]{figures/sciduct.png}
+}
+
+\headerbox{Containerization}
+          {name=contain,column=1,row=2,below=sciduct}{
+          
+% \includegraphics[scale=0.3]{figures/sciduct.png}
+something on containerization
 } 
 
 %%%%%%%%%% Begin Column 2 %%%%%%%%%%
 
 \headerbox{Front End Interface}
           {name=frontend,column=2,row=0}{
-\includegraphics[scale=0.3]{figures/csonnet-model-seeds.pdf}
-\includegraphics[scale=0.3]{figures/plot_input.pdf}
+\includegraphics[scale=0.25]{figures/csonnet-model-seeds.pdf} \\
+\includegraphics[scale=0.25]{figures/plot_input.pdf}
 } 
 
 \headerbox{Computational Tasks}
-          {name=tasks,column=2,row=1, below=frontend}{
+          {name=tasks,column=3,row=0}{
 
-\includegraphics[scale=0.3]{figures/astroph_threshold_cs.pdf}
-\includegraphics[scale=0.3]{figures/danville_asym_interaction_100ns_fraction_cum_errorbar.eps}
-\includegraphics[scale=0.3]{figures/danville_no_interaction_100ns_fraction_cum_errorbar.eps}
-\includegraphics[scale=0.3]{figures/g4_timing.pdf}
-\includegraphics[scale=0.3]{figures/scatter_bar_to_ttable.pdf}
-\includegraphics[scale=0.3]{figures/star_trans.pdf}
+\includegraphics[scale=0.2]{figures/astroph_threshold_cs.pdf} \\
+\includegraphics[scale=0.33]{figures/danville_asym_interaction_100ns_fraction_cum_errorbar.eps} \\
+\includegraphics[scale=0.33]{figures/danville_no_interaction_100ns_fraction_cum_errorbar.eps} \\
+% \includegraphics[scale=0.35]{figures/g4_timing.pdf} \\
+% \includegraphics[scale=0.05]{figures/scatter_bar_to_ttable.pdf}
+% \includegraphics[scale=0.3]{figures/star_trans.pdf}
 - User Applications
 -- CSONNET (Graph Seeding, Plotting)
 -- Structural Analysis
@@ -230,9 +245,10 @@ Grants ...
 - Common Services
 -- Graph Transformation
 
-} 
-
+}
 
 \end{poster}
+
+
 
 \end{document}
