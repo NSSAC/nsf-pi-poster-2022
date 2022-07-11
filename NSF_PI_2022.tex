@@ -29,6 +29,7 @@
 \usepackage[export]{adjustbox}
 
 \usepackage{graphicx}
+\usepackage{caption}
 
 \usepackage{booktabs} % Top and bottom rules for tables
 \usepackage{enumitem} % Used to reduce itemize/enumerate spacing
@@ -166,43 +167,39 @@ linewidth=2pt % Width of the border lines around content boxes
 
 %%%%%%%%%% Begin Column 0 %%%%%%%%%%
 
-\headerbox{Motivations}
+\headerbox{Motivation}
           {name=motive,column=0,row=0}{
-{
-\begin{minipage}{.6\textwidth}
        
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
 \item Networks
 	\begin{itemize}
-	\item Widely Utilized and Ubiquitous
-	\item Large Academic and Commercial Interest
+	\item Widely utilized and ubiquitous
+	\item Large academic and commercial interest
 	\end{itemize}
 
 \item Cyberinfrastructure
 	\begin{itemize}
-	\item Network Operations are similar across domains
+	\item Network operations are similar across domains
 	\item No existing general purpose network focused CI
 	\item Existing CIs (based off 2020 net.science presentation)
 	\item XSEDE science gateway - No Network gateways
-	\item Science Gateways Community Institute - ~600 Gateways - 15 dedicated to specific network analysis in narrow scope
+	\item Science Gateways Community Institute - ~600 gateways - 15 dedicated to specific network analysis in narrow scope
 	\end{itemize}
 \end{itemize}
-\end{minipage}
-\hfill
-\begin{minipage}{.3\textwidth}
+
 \begin{center}
-   \includegraphics[scale=0.25]{figures/motivation.pdf}
+   \includegraphics[scale=0.35]{figures/motivation.pdf}
    \end{center}
-\end{minipage}
-}}
+
+}
 \headerbox{System Description}
           {name=system,column=0,row=1,below=motive}{
 
 \begin{minipage}{.4\textwidth}
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-\item Open Access/Open Source Cyberinfrastructure
-\item General Purpose Network Science
-\item Community Resource
+\item Open access/Open source cyberinfrastructure
+\item General purpose network science
+\item Community resource
 \end{itemize}
 \end{minipage}
 \hfill
@@ -211,16 +208,25 @@ linewidth=2pt % Width of the border lines around content boxes
 \includegraphics[scale=0.25]{figures/sys_descr.png}
 \end{center}
 \end{minipage}
-
 }
 
 \headerbox{Networks}
-          {name=network,column=0,row=2,below=system}{
-\includegraphics[scale=0.2]{figures/single_net.png}
+          {name=network,column=0,row=2,below=system}{         
+
+\begin{minipage}{.5\textwidth}        
+Labeled Multigraph
+\centering
+\includegraphics[scale=0.22]{figures/single_net.png}
+%\captionof{figure}{Labeled Multigraph\label{label}}
+\end{minipage}
+\hfill
+ \begin{minipage}{.45\textwidth}      
+ Multiplex Network
+ \centering
 \includegraphics[scale=0.3]{figures/multi_net.png}
-
+%\captionof{figure}{Multiplex Network\label{multiplex}}
+\end{minipage}
 }
-
 \headerbox{Timeline}
           {name=time,column=0,row=1,span=3,below=network}{
           
@@ -231,16 +237,30 @@ linewidth=2pt % Width of the border lines around content boxes
 \headerbox{System Views}
           {name=sysViews, column=1,row=0}{
           
+\begin{minipage}{.3\textwidth}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+\item Tasks:  user-supplied, common services, system support
+\item Extensible
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}{.7\textwidth}
+Task View
+
+\includegraphics[scale=0.2]{figures/CINSArchV7-v02.pdf} 
+\end{minipage}
+
 \begin{minipage}{.29\textwidth}
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-\item Point 1
-\item Point 2
-\item Point 3
+\item Job submission via Web App
+\item 3rd party codes use same API
+\item Jobs currently run on a cluster
 \end{itemize}
 \end{minipage}
 \hfill
 \begin{minipage}{.71\textwidth}
-\includegraphics[scale=0.2]{figures/CINSArchV7-v02.pdf} 
+Process View
+
 \includegraphics[scale=0.2]{figures/netsci_ops_v6.pdf}
 \end{minipage}
 
@@ -267,17 +287,9 @@ User Service
 File Service
 
 \small{\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-	\item Net.science file storage system
-	\item Stores
-		\tiny{
-		\begin{itemize}
-			\item File Data
-			\item User Defined Metadata
-			\item Auto discovered Metadata
-		\end{itemize}}
-	\small{
-	\item File Validations
-	\item Querying System}
+	\item Data stores
+	\item File validations
+	\item Query system
 \end{itemize}}
 
 \end{minipage}
@@ -287,14 +299,8 @@ File Service
 Job Service
 \small{\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
 	\item Task Executor
-	\tiny{
-		\begin{itemize}
-			\item Tasks execute on HPC Resources
-			\item Tasks can be standalone or workflows
-		\end{itemize}}
-	\small{
-	\item Stages and Destages with FileService
-	\item Container Based (Singularity Images)}
+	\item Manages workspaces
+	\item Container-based 
 
 \end{itemize}}
 
@@ -313,39 +319,65 @@ something on containerization
 
 \headerbox{Front End Interface}
           {name=frontend,column=2,row=0}{
-\includegraphics[scale=0.25]{figures/csonnet-model-seeds.pdf} 
+          
 
+\begin{minipage}{.29\textwidth}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+\item Main screen, contagion simulation
+\item Discrete time, propagation on networks
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}{.71\textwidth}         
+\includegraphics[scale=0.25]{figures/csonnet-model-seeds.pdf} 
+\end{minipage}
+
+\begin{minipage}{.29\textwidth}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+\item Main screen, plot generation
+\item Publication quality, contagion results
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}{.71\textwidth}  
 \includegraphics[scale=0.26]{figures/plot_input.pdf}
+\end{minipage}
 } 
 
 \headerbox{Computational Tasks}
           {name=tasks,column=3,row=0}{
 
-\begin{minipage}{0.4\linewidth}
+
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-\item User Applications
-	\begin{itemize}
-	\item CSONNET (Graph Seeding, Plotting)
-	\item Structural Analysis
-	\item Graph Generation
-	\end{itemize}
-\item Common Services
-	\begin{itemize}
-	\item Graph Transformation
-	\end{itemize}
+\item User Applications:  Example CSonNet
 \end{itemize}
-\end{minipage}         
-\hfill
-\begin{minipage}{0.6\linewidth}
-\includegraphics[scale=0.2]{figures/astroph_threshold_cs.pdf} 
+
+\begin{minipage}{0.5\linewidth}
+\centering
+\includegraphics[scale=0.16]{figures/astroph_threshold_cs.pdf} 
 \end{minipage}
-\begin{minipage}{0.45\linewidth}
+\hfill
+\begin{minipage}{0.5\linewidth}
+\centering
+\includegraphics[scale=0.6]{figures/clustering_seed.pdf} 
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\linewidth}
 \includegraphics[scale=0.27]{figures/danville_asym_interaction_100ns_fraction_cum_errorbar.eps} 
 \end{minipage}
 \hfill
-\begin{minipage}{0.45\linewidth}
+\begin{minipage}{0.48\linewidth}
 \includegraphics[scale=0.27]{figures/danville_no_interaction_100ns_fraction_cum_errorbar.eps} 
 \end{minipage}
+%	\begin{itemize}
+%	\item CSONNET (Graph Seeding, Plotting)
+%	\item Structural Analysis
+%	\item Graph Generation
+%	\end{itemize}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+\item Common Services:  Example Graph Transformations
+\end{itemize} 
+\hfill
 \begin{minipage}{0.45\linewidth}
 \includegraphics[scale=0.27]{figures/g4_timing.pdf} 
 \end{minipage}
