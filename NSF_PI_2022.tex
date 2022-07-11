@@ -26,6 +26,10 @@
 \usepackage{amsmath} % For typesetting math
 \usepackage{amssymb} % Adds new symbols to be used in math mode
 
+\usepackage[export]{adjustbox}
+
+\usepackage{graphicx}
+
 \usepackage{booktabs} % Top and bottom rules for tables
 \usepackage{enumitem} % Used to reduce itemize/enumerate spacing
 \usepackage{url}
@@ -33,6 +37,8 @@
 
 \usepackage{palatino} % Use the Palatino font
 \usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
+
+\usepackage{wrapfig}
 
 \usepackage{multicol} % Required for multiple columns
 \setlength{\columnsep}{1.5em} % Slightly increase the space between columns
@@ -105,7 +111,7 @@ headerFontColor=white, % Text color for the header text in the content boxes
 boxColorOne=white, % Background color of the content boxes
 textborder=roundedleft, % Format of the border around content boxes, can be: none, bars, coils, triangles, rectangle, rounded, roundedsmall, roundedright or faded
 eyecatcher=true, % Set to false for ignoring the left logo in the title and move the title left
-headerheight=0.19\textheight, % Height of the header
+headerheight=0.14\textheight, % Height of the header
 headershape=roundedright, % Specify the rounded corner in the content box headers, can be: rectangle, small-rounded, roundedright, roundedleft or rounded
 headerfont=\Large\bf\textsc, % Large, bold and sans serif font in the headers of content boxes
 %textfont={\setlength{\parindent}{1.5em}}, % Uncomment for paragraph indentation
@@ -162,17 +168,49 @@ linewidth=2pt % Width of the border lines around content boxes
 
 \headerbox{Motivations}
           {name=motive,column=0,row=0}{
-{\small
+{
+\begin{minipage}{.6\textwidth}
+       
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-\item Objectives of the project line 1
-\item Objectives of the project line 2
-\item Objectives of the project line 3
-\end{itemize}
-}}
+\item Networks
+	\begin{itemize}
+	\item Widely Utilized and Ubiquitous
+	\item Large Academic and Commercial Interest
+	\end{itemize}
 
+\item Cyberinfrastructure
+	\begin{itemize}
+	\item Network Operations are similar across domains
+	\item No existing general purpose network focused CI
+	\item Existing CIs (based off 2020 net.science presentation)
+	\item XSEDE science gateway - No Network gateways
+	\item Science Gateways Community Institute - ~600 Gateways - 15 dedicated to specific network analysis in narrow scope
+	\end{itemize}
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}{.3\textwidth}
+\begin{center}
+   \includegraphics[scale=0.25]{figures/motivation.pdf}
+   \end{center}
+\end{minipage}
+}}
 \headerbox{System Description}
           {name=system,column=0,row=1,below=motive}{
-\includegraphics[scale=0.3]{figures/sys_descr.png}
+
+\begin{minipage}{.4\textwidth}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+\item Open Access/Open Source Cyberinfrastructure
+\item General Purpose Network Science
+\item Community Resource
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}{.6\textwidth}
+\begin{center}
+\includegraphics[scale=0.25]{figures/sys_descr.png}
+\end{center}
+\end{minipage}
 
 }
 
@@ -183,35 +221,86 @@ linewidth=2pt % Width of the border lines around content boxes
 
 }
 
-\headerbox{Acknowledgments}
-          {name=Ack,column=0,row=2,below=network}{
-{\footnotesize
-This work was supported by NSF
-Grants ...
+\headerbox{Timeline}
+          {name=time,column=0,row=1,span=3,below=network}{
+          
 }
-}
-
-\headerbox{Contact Person}
-          {name=Contact,column=0,row=3,below=Ack}{
-{\footnotesize
-{Chris J. Kuhlman~ (\textcolor{green}{\textbf{\texttt{cjk8gx@virginia.edu}}})}
-}}
 
 %%%%%%%%%% Begin Column 1 %%%%%%%%%%
 
 \headerbox{System Views}
           {name=sysViews, column=1,row=0}{
-
-\includegraphics[scale=0.2]{figures/CINSArchV7-v02.pdf} \\
+          
+\begin{minipage}{.29\textwidth}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+\item Point 1
+\item Point 2
+\item Point 3
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}{.71\textwidth}
+\includegraphics[scale=0.2]{figures/CINSArchV7-v02.pdf} 
 \includegraphics[scale=0.2]{figures/netsci_ops_v6.pdf}
+\end{minipage}
 
 }
 
 \headerbox{SciDuct}
           {name=sciduct,column=1,row=1,below=sysViews}{
           
-\includegraphics[scale=0.25]{figures/sciduct.png}
+\includegraphics[scale=0.27]{figures/sciduct.png}
+
+\noindent 
+\begin{minipage}[t]{0.32\columnwidth}
+User Service
+
+\small{\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+	\item Authentication
+	\item Teams
+	\item Preferences
+\end{itemize}}
+\end{minipage}
+\hfill
+\noindent
+\begin{minipage}[t]{0.32\columnwidth}
+File Service
+
+\small{\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+	\item Net.science file storage system
+	\item Stores
+		\tiny{
+		\begin{itemize}
+			\item File Data
+			\item User Defined Metadata
+			\item Auto discovered Metadata
+		\end{itemize}}
+	\small{
+	\item File Validations
+	\item Querying System}
+\end{itemize}}
+
+\end{minipage}
+\hfill
+\noindent
+\begin{minipage}[t]{0.32\columnwidth}
+Job Service
+\small{\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+	\item Task Executor
+	\tiny{
+		\begin{itemize}
+			\item Tasks execute on HPC Resources
+			\item Tasks can be standalone or workflows
+		\end{itemize}}
+	\small{
+	\item Stages and Destages with FileService
+	\item Container Based (Singularity Images)}
+
+\end{itemize}}
+
+\end{minipage}
 }
+
 
 \headerbox{Containerization}
           {name=contain,column=1,row=2,below=sciduct}{
@@ -224,28 +313,65 @@ something on containerization
 
 \headerbox{Front End Interface}
           {name=frontend,column=2,row=0}{
-\includegraphics[scale=0.25]{figures/csonnet-model-seeds.pdf} \\
-\includegraphics[scale=0.25]{figures/plot_input.pdf}
+\includegraphics[scale=0.25]{figures/csonnet-model-seeds.pdf} 
+
+\includegraphics[scale=0.26]{figures/plot_input.pdf}
 } 
 
 \headerbox{Computational Tasks}
           {name=tasks,column=3,row=0}{
 
-\includegraphics[scale=0.2]{figures/astroph_threshold_cs.pdf} \\
-\includegraphics[scale=0.33]{figures/danville_asym_interaction_100ns_fraction_cum_errorbar.eps} \\
-\includegraphics[scale=0.33]{figures/danville_no_interaction_100ns_fraction_cum_errorbar.eps} \\
-% \includegraphics[scale=0.35]{figures/g4_timing.pdf} \\
-% \includegraphics[scale=0.05]{figures/scatter_bar_to_ttable.pdf}
-% \includegraphics[scale=0.3]{figures/star_trans.pdf}
-- User Applications
--- CSONNET (Graph Seeding, Plotting)
--- Structural Analysis
--- Graph Generation
-
-- Common Services
--- Graph Transformation
+\begin{minipage}{0.4\linewidth}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+\item User Applications
+	\begin{itemize}
+	\item CSONNET (Graph Seeding, Plotting)
+	\item Structural Analysis
+	\item Graph Generation
+	\end{itemize}
+\item Common Services
+	\begin{itemize}
+	\item Graph Transformation
+	\end{itemize}
+\end{itemize}
+\end{minipage}         
+\hfill
+\begin{minipage}{0.6\linewidth}
+\includegraphics[scale=0.2]{figures/astroph_threshold_cs.pdf} 
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+\includegraphics[scale=0.27]{figures/danville_asym_interaction_100ns_fraction_cum_errorbar.eps} 
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\linewidth}
+\includegraphics[scale=0.27]{figures/danville_no_interaction_100ns_fraction_cum_errorbar.eps} 
+\end{minipage}
+\begin{minipage}{0.45\linewidth}
+\includegraphics[scale=0.27]{figures/g4_timing.pdf} 
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\linewidth}
+\includegraphics[scale=0.038]{figures/scatter_bar_to_ttable.pdf}
+\end{minipage}
+\begin{center}
+\includegraphics[scale=0.5]{figures/star_trans.pdf}
+\end{center}
 
 }
+
+\headerbox{Acknowledgments}
+          {name=Ack,column=3,row=2,below=tasks}{
+{\footnotesize
+This work was supported by NSF
+Grants ...
+}
+}
+
+\headerbox{Contact Person}
+          {name=Contact,column=3,row=3,below=Ack}{
+{\footnotesize
+{Chris J. Kuhlman~ (\textcolor{green}{\textbf{\texttt{cjk8gx@virginia.edu}}})}
+}}
 
 \end{poster}
 
