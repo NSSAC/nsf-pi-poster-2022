@@ -145,9 +145,9 @@ linewidth=2pt % Width of the border lines around content boxes
 %          S. S. Ravi$\,{}^{1}$}}\\ \vspace{0.1em} 
 %             {$^1$University of Virginia} \\ \vspace{0.25em}
            \textcolor{magenta}{%\normalsize
-               {\textbf{\Large{(NSF Cyberinfrastructure for Sustained Scientific Innovation (CSSI) Principal Investigator Meeting,~ July 2022)}}}} \\
+               {\textbf{\Large{NSF Cyberinfrastructure for Sustained Scientific Innovation (CSSI) Principal Investigator Meeting,~ July 2022}}}} \\
                \vspace{2.5mm}
-                 \textbf{\Large{Cyberinfrastructure landing page:  \textcolor{magenta}{\underline{https://net.science}}}}            
+                 \textbf{\Large{\textcolor{magenta}{\underline{https://net.science}}}}            
             } }% Author names and institution
             
 { 
@@ -155,8 +155,9 @@ linewidth=2pt % Width of the border lines around content boxes
 %\centering
 \includegraphics[scale=0.4]{logos/stanford.png} &
 \includegraphics[scale=0.4]{logos/vt.png} \\
-\includegraphics[scale=0.4]{logos/ncatnt.png} &
-\includegraphics[scale=0.4]{logos/iu.png} \\
+\includegraphics[scale=0.4]{logos/ncatnt.png} 
+% &
+%\includegraphics[scale=0.4]{logos/iu.png} \\
 %\centering
 % \includegraphics[scale=0.15]{ualbany_logo.png}
 \end{tabular}
@@ -183,13 +184,16 @@ linewidth=2pt % Width of the border lines around content boxes
 	\item Large academic and commercial interest
 	\end{itemize}
 
-\item Cyberinfrastructure
+\item Cyberinfrastructure (CI)
 	\begin{itemize}
 	\item Network operations are similar across domains
 	\item No existing general purpose network focused CI
-	\item Existing CIs (based off 2020 net.science presentation)
-	\item XSEDE science gateway - No Network gateways
-	\item Science Gateways Community Institute - ~600 gateways - 15 dedicated to specific network analysis in narrow scope
+	\item Existing CIs
+	\begin{itemize}
+	    \item XSEDE science gateway - No network gateways
+	    \item Science Gateways Community Institute - ~600 gateways - 15 have
+	    particular network analyses in narrow scope
+	\end{itemize}
 	\end{itemize}
 \end{itemize}
 
@@ -206,6 +210,9 @@ linewidth=2pt % Width of the border lines around content boxes
 \item Open access/Open source cyberinfrastructure
 \item General purpose network science
 \item Community resource
+\item Requires no software experience
+\item Useable by domain experts
+\item Under active development
 \end{itemize}
 \end{minipage}
 \hfill
@@ -233,7 +240,7 @@ Labeled Multigraph
 %\captionof{figure}{Multiplex Network\label{multiplex}}
 \end{minipage}
 }
-\headerbox{Contributions}
+\headerbox{Community Resource}
           {name=contri,column=0,row=1 ,below=network}{
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
 \item Artifacts
@@ -244,6 +251,7 @@ Labeled Multigraph
 \item Data collection to generate networks}
 \end{itemize}
 \item Contributors given full credit in system.
+\item \textit{Email:  net.science@virginia.edu}
 \end{itemize}
 
 }
@@ -321,7 +329,7 @@ File Service
 Job Service
 \small{\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
 	\item Task Executor
-	\item Manages workspaces
+	\item Manages I/O from FS
 	\item Container-based 
 
 \end{itemize}}
@@ -334,7 +342,22 @@ Job Service
           {name=contain,column=1,row=2,below=sciduct}{
           
 % \includegraphics[scale=0.3]{figures/sciduct.png}
-something on containerization
+%something on containerization
+\begin{minipage}{.5\textwidth}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+\item Easy to interface with
+\item Portable
+\item Self contained
+\item Secure
+
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}{.5\textwidth}
+\begin{center}
+\includegraphics[scale=0.2]{figures/container_figure_v02.png}
+\end{center}
+\end{minipage}
 } 
 
 %%%%%%%%%% Begin Column 2 %%%%%%%%%%
@@ -345,7 +368,7 @@ something on containerization
 
 \begin{minipage}{.29\textwidth}
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-\item Main screen, contagion simulation
+\item Input form, contagion simulation
 \item Discrete time, propagation on networks
 \end{itemize}
 \end{minipage}
@@ -353,10 +376,13 @@ something on containerization
 \begin{minipage}{.71\textwidth}         
 \includegraphics[scale=0.25]{figures/csonnet-model-seeds.pdf} 
 \end{minipage}
+
+\vspace{0.3in}
+
 \begin{minipage}{.29\textwidth}
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-\item Main screen, plot generation
-\item Publication quality, contagion results
+\item Input form, plot generation
+\item Publication quality
 \end{itemize}
 \end{minipage}
 \hfill
@@ -367,26 +393,78 @@ something on containerization
 \hfill
 \vspace{5mm}
 
-\begin{minipage}{0.48\linewidth}
-Graph:  nodes and edge are those of graph
+%\begin{minipage}{0.48\linewidth}
+%Graph:  nodes and edge are those of graph
+%
+%\includegraphics[scale=0.3]{figures/graph_nodes.pdf} 
+%\end{minipage}
+%\hfill
+%\begin{minipage}{0.48\linewidth}
+%
+%Graph:  nodes are communities
+%and edge are those of between communities
+%
+%\includegraphics[scale=0.3]{figures/graph_community.pdf} 
+%\end{minipage}
+
+\vspace{0.3in}
+
+
+\begin{minipage}{0.3\linewidth}
+Graph:  nodes and edges are those of graph
 
 \includegraphics[scale=0.3]{figures/graph_nodes.pdf} 
 \end{minipage}
 \hfill
-\begin{minipage}{0.48\linewidth}
+\begin{minipage}{0.3\linewidth}
 
 Graph:  nodes are communities
-and edge are those of between communities
+and edges are between communities
 
 \includegraphics[scale=0.3]{figures/graph_community.pdf} 
 \end{minipage}
+\hfill
+\begin{minipage}{0.3\linewidth}
 
-\vspace{5mm}
-pngraph visualization
+Graph:  client-side rendering
 
-\begin{center}
-\includegraphics[scale=0.12]{figures/gnm-25-100_pngraph.png} 
-\end{center}
+\includegraphics[scale=0.08]{figures/gnm-25-100_pngraph.png} 
+\end{minipage}
+
+%\vspace{5mm}
+%pngraph visualization
+
+%\begin{center}
+%\includegraphics[scale=0.12]{figures/gnm-25-100_pngraph.png} 
+%\end{center}
+
+\vspace{0.3in}
+
+
+\begin{minipage}{0.3\linewidth}
+Simulation results pallet
+
+\includegraphics[scale=0.07]{figures/sim_results_pallet} 
+\end{minipage}
+%\hfill
+\hspace{0.1in}
+\begin{minipage}{0.3\linewidth}
+
+Graph discovered metadata
+
+\includegraphics[scale=0.06]{figures/graph_discovered_metadata.png} 
+\end{minipage}
+%\hfill
+\hspace{0.1in}
+\begin{minipage}{0.3\linewidth}
+
+Job provenance
+
+%\includegraphics[scale=0.08]{figures/provenance.png} 
+\includegraphics[trim = 0in 0in 10in 0in, clip, scale=0.08]{figures/provenance.png}
+\end{minipage}
+
+
 }
 
 \headerbox{Computational Tasks}
@@ -423,6 +501,10 @@ pngraph visualization
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
 \item Common Services:  Example Graph Transformations
 \end{itemize} 
+\begin{center}
+\includegraphics[scale=0.5]{figures/star_trans.pdf}
+\end{center}
+
 \hfill
 \begin{minipage}{0.45\linewidth}
 \includegraphics[scale=0.27]{figures/g4_timing.pdf} 
@@ -431,23 +513,22 @@ pngraph visualization
 \begin{minipage}{0.45\linewidth}
 \includegraphics[scale=0.038]{figures/scatter_bar_to_ttable.pdf}
 \end{minipage}
-\begin{center}
-\includegraphics[scale=0.5]{figures/star_trans.pdf}
-\end{center}
 
 }
 
 \headerbox{Acknowledgments}
           {name=Ack,column=3,row=2,below=tasks}{
 {\footnotesize
-This work was supported by NSF
-Grants ...
+This work was supported by
+NSF Grants OAC-1916805 (CINES) and CMMI-1916670 (CRISP 2.0),
+University of Virginia Strategic Investment Fund awardnumber SIF160.
 }
 }
 
 \headerbox{Contact Person}
           {name=Contact,column=3,row=3,below=Ack}{
 {\footnotesize
+{Madhav V. Marathe~ (\textcolor{green}{\textbf{\texttt{marathe@virginia.edu}}})}\\
 {Chris J. Kuhlman~ (\textcolor{green}{\textbf{\texttt{cjk8gx@virginia.edu}}})}
 }}
 
