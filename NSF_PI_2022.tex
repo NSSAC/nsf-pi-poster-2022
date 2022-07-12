@@ -135,21 +135,21 @@ linewidth=2pt % Width of the border lines around content boxes
 \end{tabular}
 %\end{center}
 }
-{\textbf{CINES: A CyberInfrastructure for Network Engineering and Science}
+{\textbf{CINES: A CyberInfrastructure for Network Engineering and Science} \\
             % \vspace{0.25em}
-} % Poster title
+ % Poster title
+\vspace{-3mm}
 {
 % \textcolor{green}{\textbf{Madhav Marathe$\,{}^1$,~
 %          Chris J. Kuhlman$\,{}^{1}$,~ Dustin Machi$\,{}^{1}$,~
 %          S. S. Ravi$\,{}^{1}$}}\\ \vspace{0.1em} 
 %             {$^1$University of Virginia} \\ \vspace{0.25em}
-            \textcolor{magenta}{%\normalsize
-               \textbf{(NSF Cyberinfrastructure for Sustained Scientific Innovation (CSSI) Principal Investigator Meeting,~ July 2022)}}
-            } % Author names and institution
-% {\includegraphics[scale=0.3]{logos/iu.png}} 
-             % Second university/lab logo on the right
-%% Conference logo on the right.
-% {\includegraphics[scale=0.3]{conference_logo.png}} 
+           \textcolor{magenta}{%\normalsize
+               {\textbf{\Large{(NSF Cyberinfrastructure for Sustained Scientific Innovation (CSSI) Principal Investigator Meeting,~ July 2022)}}}} \\
+               \vspace{2.5mm}
+                 \textbf{\Large{Cyberinfrastructure landing page:  \textcolor{magenta}{\underline{https://net.science}}}}            
+            } }% Author names and institution
+            
 { 
 \begin{tabular}{c c}
 %\centering
@@ -162,6 +162,12 @@ linewidth=2pt % Width of the border lines around content boxes
 \end{tabular}
 %\end{center}
 }
+
+            
+% {\includegraphics[scale=0.3]{logos/iu.png}} 
+             % Second university/lab logo on the right
+%% Conference logo on the right.
+% {\includegraphics[scale=0.3]{conference_logo.png}} 
 
 \vspace{-2.5in} %%% Remove the gap after the conference name.
 
@@ -188,14 +194,14 @@ linewidth=2pt % Width of the border lines around content boxes
 \end{itemize}
 
 \begin{center}
-   \includegraphics[scale=0.35]{figures/motivation.pdf}
+   \includegraphics[scale=0.2]{figures/motivation.pdf}
    \end{center}
 
 }
 \headerbox{System Description}
           {name=system,column=0,row=1,below=motive}{
 
-\begin{minipage}{.4\textwidth}
+\begin{minipage}{.5\textwidth}
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
 \item Open access/Open source cyberinfrastructure
 \item General purpose network science
@@ -203,9 +209,9 @@ linewidth=2pt % Width of the border lines around content boxes
 \end{itemize}
 \end{minipage}
 \hfill
-\begin{minipage}{.6\textwidth}
+\begin{minipage}{.5\textwidth}
 \begin{center}
-\includegraphics[scale=0.25]{figures/sys_descr.png}
+\includegraphics[scale=0.2]{figures/sys_descr.png}
 \end{center}
 \end{minipage}
 }
@@ -227,9 +233,19 @@ Labeled Multigraph
 %\captionof{figure}{Multiplex Network\label{multiplex}}
 \end{minipage}
 }
-\headerbox{Timeline}
-          {name=time,column=0,row=1,span=3,below=network}{
-          
+\headerbox{Contributions}
+          {name=contri,column=0,row=1 ,below=network}{
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+\item Artifacts
+\begin{itemize}
+\small{
+\item Networks
+\item Operations on networks
+\item Data collection to generate networks}
+\end{itemize}
+\item Contributors given full credit in system.
+\end{itemize}
+
 }
 
 %%%%%%%%%% Begin Column 1 %%%%%%%%%%
@@ -271,6 +287,7 @@ Process View
           
 \includegraphics[scale=0.27]{figures/sciduct.png}
 
+\vspace{5mm}
 \noindent 
 \begin{minipage}[t]{0.32\columnwidth}
 User Service
@@ -331,7 +348,6 @@ something on containerization
 \begin{minipage}{.71\textwidth}         
 \includegraphics[scale=0.25]{figures/csonnet-model-seeds.pdf} 
 \end{minipage}
-
 \begin{minipage}{.29\textwidth}
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
 \item Main screen, plot generation
@@ -340,9 +356,33 @@ something on containerization
 \end{minipage}
 \hfill
 \begin{minipage}{.71\textwidth}  
+\vspace{5mm}
 \includegraphics[scale=0.26]{figures/plot_input.pdf}
 \end{minipage}
-} 
+\hfill
+\vspace{5mm}
+
+\begin{minipage}{0.48\linewidth}
+Graph:  nodes and edge are those of graph
+
+\includegraphics[scale=0.3]{figures/graph_nodes.pdf} 
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\linewidth}
+
+Graph:  nodes are communities
+and edge are those of between communities
+
+\includegraphics[scale=0.3]{figures/graph_community.pdf} 
+\end{minipage}
+
+\vspace{5mm}
+pngraph visualization
+
+\begin{center}
+\includegraphics[scale=0.12]{figures/gnm-25-100.pngraph.png} 
+\end{center}
+}
 
 \headerbox{Computational Tasks}
           {name=tasks,column=3,row=0}{
@@ -365,6 +405,7 @@ something on containerization
 \begin{minipage}{0.5\linewidth}
 \includegraphics[scale=0.27]{figures/danville_asym_interaction_100ns_fraction_cum_errorbar.eps} 
 \end{minipage}
+\vspace{5mm}
 \hfill
 \begin{minipage}{0.48\linewidth}
 \includegraphics[scale=0.27]{figures/danville_no_interaction_100ns_fraction_cum_errorbar.eps} 
