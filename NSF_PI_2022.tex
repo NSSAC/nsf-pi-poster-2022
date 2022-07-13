@@ -204,8 +204,9 @@ linewidth=2pt % Width of the border lines around content boxes
 	\end{itemize}
 	\end{itemize}
 \end{itemize}
-
+\vspace*{0.2in}
 }
+
 \headerbox{System Description}
           {name=system,column=0,row=1,below=motive}{
 
@@ -225,6 +226,7 @@ linewidth=2pt % Width of the border lines around content boxes
 \includegraphics[scale=0.22]{figures/sys_descr.png}
 \end{center}
 \end{minipage}
+\vspace*{0.2in}
 }
 
 \headerbox{Networks}
@@ -250,6 +252,7 @@ linewidth=2pt % Width of the border lines around content boxes
 \includegraphics[scale=0.35]{figures/multi_net.png}
 %\captionof{figure}{Multiplex Network\label{multiplex}}
 \end{minipage}
+\vspace*{0.2in}
 }
 \headerbox{Get Involved}
           {name=contri,column=0,row=1 ,below=network}{
@@ -264,7 +267,7 @@ linewidth=2pt % Width of the border lines around content boxes
 \medskip
 \item Have questions?~ \textbf{\texttt{net.science@virginia.edu}}
 \end{itemize}
-
+\vspace*{0.1in}
 }
 
 %%%%%%%%%% Begin Column 1 %%%%%%%%%%
@@ -379,36 +382,54 @@ Job Service
 
 %%%%%%%%%% Begin Column 2 %%%%%%%%%%
 
-\headerbox{Front End Interface}
+\headerbox{Web App}
           {name=frontend,column=2,row=0}{
-          
 
-\begin{minipage}{.29\textwidth}
-\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-\item Input form, contagion simulation
-\item Discrete time, propagation on networks
-\end{itemize}
-\end{minipage}
-\hfill
-\begin{minipage}{.71\textwidth}         
-\includegraphics[scale=0.25]{figures/csonnet-model-seeds.pdf} 
-\end{minipage}
+\begin{center}
+\textcolor{blue}{\large\textbf{Input Forms}}
+\end{center}
 
-\vspace{0.3in}
+\textbf{Contagion Simulation:}
+% \medskip
 
-\begin{minipage}{.29\textwidth}
-\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-\item Input form, plot generation
-\item Publication quality
-\end{itemize}
-\end{minipage}
-\hfill
-\begin{minipage}{.71\textwidth}  
-\vspace{5mm}
-\includegraphics[scale=0.26]{figures/plot_input.pdf}
-\end{minipage}
-\hfill
-\vspace{5mm}
+\begin{center}
+\includegraphics[scale=0.28]{figures/csonnet-model-seeds.pdf}
+\end{center}
+
+\textbf{Publication Quality Plot Generation:}
+% \medskip
+
+\begin{center}
+\includegraphics[scale=0.28]{figures/plot_input.pdf}
+\end{center}
+
+
+% \begin{minipage}{.29\textwidth}
+% \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+% \item Input form, contagion simulation
+% \item Discrete time, propagation on networks
+% \end{itemize}
+% \end{minipage}
+% \hfill
+% \begin{minipage}{.71\textwidth}         
+% \includegraphics[scale=0.25]{figures/csonnet-model-seeds.pdf} 
+% \end{minipage}
+
+% \vspace{0.3in}
+
+% \begin{minipage}{.29\textwidth}
+% \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+% \item Input form, plot generation
+% \item Publication quality
+% \end{itemize}
+% \end{minipage}
+% \hfill
+% \begin{minipage}{.71\textwidth}  
+% \vspace{5mm}
+% \includegraphics[scale=0.26]{figures/plot_input.pdf}
+% \end{minipage}
+% \hfill
+% \vspace{5mm}
 
 %\begin{minipage}{0.48\linewidth}
 %Graph:  nodes and edge are those of graph
@@ -424,28 +445,32 @@ Job Service
 %\includegraphics[scale=0.3]{figures/graph_community.pdf} 
 %\end{minipage}
 
-\vspace{0.3in}
+% \vspace{0.3in}
 
+\begin{center}
+\textcolor{blue}{\large\textbf{Outputs}}
+\end{center}
 
 \begin{minipage}{0.3\linewidth}
-Graph:  nodes and edges are those of graph
+% Graph:  nodes and edges are those of graph
+Uncontracted graph
 
 \includegraphics[scale=0.3]{figures/graph_nodes.pdf} 
 \end{minipage}
 \hfill
 \begin{minipage}{0.3\linewidth}
 
-Graph:  nodes are communities
-and edges are between communities
+Contracted graph
+% Graph:  nodes are communities and edges are between communities
 
 \includegraphics[scale=0.3]{figures/graph_community.pdf} 
 \end{minipage}
 \hfill
 \begin{minipage}{0.3\linewidth}
 
-Graph:  client-side rendering
+Client-side rendering
 
-\includegraphics[scale=0.08]{figures/gnm-25-100_pngraph.png} 
+\includegraphics[scale=0.06]{figures/gnm-25-100_pngraph.png} 
 \end{minipage}
 
 %\vspace{5mm}
@@ -458,22 +483,22 @@ Graph:  client-side rendering
 \vspace{0.3in}
 
 
-\begin{minipage}{0.3\linewidth}
+\begin{minipage}{0.35\linewidth}
 Simulation results pallet
 
 \includegraphics[scale=0.07]{figures/sim_results_pallet} 
 \end{minipage}
 %\hfill
 \hspace{0.1in}
-\begin{minipage}{0.3\linewidth}
+\begin{minipage}{0.36\linewidth}
 
-Graph discovered metadata
+Discovered graph metadata
 
 \includegraphics[scale=0.06]{figures/graph_discovered_metadata.png} 
 \end{minipage}
 %\hfill
 \hspace{0.1in}
-\begin{minipage}{0.3\linewidth}
+\begin{minipage}{0.21\linewidth}
 
 Job provenance
 
@@ -487,10 +512,9 @@ Job provenance
 \headerbox{Computational Tasks}
           {name=tasks,column=3,row=0}{
 
-
-\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-\item User Applications:  Example CSonNet
-\end{itemize}
+\begin{center}
+\textcolor{blue}{\large\textbf{User Applications: Example CSonNet}}
+\end{center}
 
 \begin{minipage}{0.5\linewidth}
 \centering
@@ -515,9 +539,9 @@ Job provenance
 %	\item Structural Analysis
 %	\item Graph Generation
 %	\end{itemize}
-\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-\item Common Services:  Example Graph Transformations
-\end{itemize} 
+\begin{center}
+\textcolor{blue}{\large\textbf{Common Services: Example Graph Transformations}}
+\end{center}
 \begin{center}
 \includegraphics[scale=0.5]{figures/star_trans.pdf}
 \end{center}
