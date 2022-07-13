@@ -97,7 +97,7 @@
 
 
 \begin{document}
-
+\footnotesize
 \begin{poster}
 {
 columns=4,  %No. of columns
@@ -177,7 +177,7 @@ linewidth=2pt % Width of the border lines around content boxes
 \headerbox{Motivation}
           {name=motive,column=0,row=0}{
 
-\begin{minipage}{.75\textwidth}
+\begin{minipage}{.73\textwidth}
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
 \item Networks
 	\begin{itemize}
@@ -186,9 +186,9 @@ linewidth=2pt % Width of the border lines around content boxes
 	\end{itemize}
 \end{itemize}
  \end{minipage}       
-\hfill
-\begin{minipage}{.2\textwidth}
-\includegraphics[scale=0.17]{figures/motivation.pdf}
+% \quad
+\begin{minipage}{.22\textwidth}
+\includegraphics[scale=0.23]{figures/motivation.pdf}
 \end{minipage}
 
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
@@ -230,8 +230,10 @@ linewidth=2pt % Width of the border lines around content boxes
 \headerbox{Networks}
           {name=network,column=0,row=2,below=system}{         
 
-\begin{minipage}{.5\textwidth}        
-Labeled Multigraph
+\begin{minipage}{.5\textwidth}
+\begin{center}
+\textcolor{blue}{\textbf{Labeled Multigraph}}
+\end{center}
 \vspace{3mm}
 
 \centering
@@ -239,8 +241,9 @@ Labeled Multigraph
 %\captionof{figure}{Labeled Multigraph\label{label}}
 \end{minipage}
 \hfill
- \begin{minipage}{.35\textwidth}      
- Multiplex Network
+ \begin{minipage}{.35\textwidth}   
+ \textcolor{blue}{\textbf{Multiplex Network}}
+ % Multiplex Network
  \vspace{3mm}
  
  \centering
@@ -248,18 +251,18 @@ Labeled Multigraph
 %\captionof{figure}{Multiplex Network\label{multiplex}}
 \end{minipage}
 }
-\headerbox{Community Resource}
+\headerbox{Get Involved}
           {name=contri,column=0,row=1 ,below=network}{
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-\item Artifacts
+\item We are looking for
 \begin{itemize}
-\small{
-\item Networks
-\item Operations on networks
-\item Data collection to generate networks}
+\item Data collection tools
+\item Data on networks
+\item Apps to build and analyze networks
 \end{itemize}
 \item Contributors given full credit in system.
-\item \textit{Email:  net.science@virginia.edu}
+\medskip
+\item Have questions?~ \textbf{\texttt{net.science@virginia.edu}}
 \end{itemize}
 
 }
@@ -268,37 +271,43 @@ Labeled Multigraph
 
 \headerbox{System Views}
           {name=sysViews, column=1,row=0}{
-          
-\begin{minipage}{.45\textwidth}
+
+\begin{center}
+\textcolor{blue}{\large\textbf{Task View}}
+\end{center}
+\begin{minipage}{.4\textwidth}
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-\item Tasks:  user-supplied, common services, system support
+\item Tasks:
+\begin{itemize}
+    \item Graph operations
+    \item Common services
+    \item System support
+\end{itemize}
 \item Extensible
 \end{itemize}
 \end{minipage}
 \hfill
-\begin{minipage}{.55\textwidth}
-
-\begin{center}
-Task View
-\end{center}
-
-\includegraphics[scale=0.2]{figures/CINSArchV8.pdf} 
+\begin{minipage}{.6\textwidth}
+\includegraphics[scale=0.25]{figures/CINSArchV8.pdf} 
 \end{minipage}
 
-\begin{minipage}{.29\textwidth}
+\vspace{4mm}
+
+\begin{center}
+\textcolor{blue}{\large\textbf{Process View}}
+\end{center}
+\vspace{-5mm}
+\begin{minipage}{.24\textwidth}
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
 \item Job submission via Web App
 \item 3rd party codes use same API
 \item Jobs currently run on a cluster
 \end{itemize}
 \end{minipage}
-\hfill
-\begin{minipage}{.71\textwidth}
+\qquad
+\begin{minipage}{.73\textwidth}
 \vspace{5mm}
-\begin{center}
-Process View
-\end{center}
-\includegraphics[scale=0.2]{figures/netsci_ops_v6.pdf}
+\includegraphics[scale=0.20]{figures/netsci_ops_v6.pdf}
 \end{minipage}
 
 }
@@ -313,34 +322,34 @@ Process View
 \begin{minipage}[t]{0.32\columnwidth}
 User Service
 
-\small{\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
 	\item Authentication
 	\item Teams
 	\item Preferences
-\end{itemize}}
+\end{itemize}
 \end{minipage}
 \hfill
 \noindent
 \begin{minipage}[t]{0.32\columnwidth}
-File Service
+File Service (FS)
 
-\small{\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
 	\item Data stores
 	\item File validations
 	\item Query system
-\end{itemize}}
+\end{itemize}
 
 \end{minipage}
 \hfill
 \noindent
 \begin{minipage}[t]{0.32\columnwidth}
 Job Service
-\small{\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-	\item Task Executor
-	\item Manages I/O from FS
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+	\item Task executor
+	\item Manages FS I/O
 	\item Container-based 
 
-\end{itemize}}
+\end{itemize}
 
 \end{minipage}
 }
@@ -363,7 +372,7 @@ Job Service
 \hfill
 \begin{minipage}{.5\textwidth}
 \begin{center}
-\includegraphics[scale=0.15]{figures/container_figure_v02.png}
+\includegraphics[scale=0.22, trim = 0in 2.77in 0in 0in, clip]{figures/container_figure_v02.png}
 \end{center}
 \end{minipage}
 } 
