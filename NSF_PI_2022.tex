@@ -176,14 +176,22 @@ linewidth=2pt % Width of the border lines around content boxes
 
 \headerbox{Motivation}
           {name=motive,column=0,row=0}{
-       
+
+\begin{minipage}{.75\textwidth}
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
 \item Networks
 	\begin{itemize}
 	\item Widely utilized and ubiquitous
 	\item Large academic and commercial interest
 	\end{itemize}
+\end{itemize}
+ \end{minipage}       
+\hfill
+\begin{minipage}{.2\textwidth}
+\includegraphics[scale=0.17]{figures/motivation.pdf}
+\end{minipage}
 
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
 \item Cyberinfrastructure (CI)
 	\begin{itemize}
 	\item Network operations are similar across domains
@@ -196,10 +204,6 @@ linewidth=2pt % Width of the border lines around content boxes
 	\end{itemize}
 	\end{itemize}
 \end{itemize}
-
-\begin{center}
-   \includegraphics[scale=0.2]{figures/motivation.pdf}
-   \end{center}
 
 }
 \headerbox{System Description}
@@ -218,7 +222,7 @@ linewidth=2pt % Width of the border lines around content boxes
 \hfill
 \begin{minipage}{.5\textwidth}
 \begin{center}
-\includegraphics[scale=0.2]{figures/sys_descr.png}
+\includegraphics[scale=0.22]{figures/sys_descr.png}
 \end{center}
 \end{minipage}
 }
@@ -228,15 +232,19 @@ linewidth=2pt % Width of the border lines around content boxes
 
 \begin{minipage}{.5\textwidth}        
 Labeled Multigraph
+\vspace{3mm}
+
 \centering
-\includegraphics[scale=0.22]{figures/single_net.png}
+\includegraphics[scale=0.25]{figures/single_net.png}
 %\captionof{figure}{Labeled Multigraph\label{label}}
 \end{minipage}
 \hfill
- \begin{minipage}{.45\textwidth}      
+ \begin{minipage}{.35\textwidth}      
  Multiplex Network
+ \vspace{3mm}
+ 
  \centering
-\includegraphics[scale=0.3]{figures/multi_net.png}
+\includegraphics[scale=0.35]{figures/multi_net.png}
 %\captionof{figure}{Multiplex Network\label{multiplex}}
 \end{minipage}
 }
@@ -355,7 +363,7 @@ Job Service
 \hfill
 \begin{minipage}{.5\textwidth}
 \begin{center}
-\includegraphics[scale=0.2]{figures/container_figure_v02.png}
+\includegraphics[scale=0.15]{figures/container_figure_v02.png}
 \end{center}
 \end{minipage}
 } 
@@ -521,7 +529,8 @@ Job provenance
 {\footnotesize
 This work was supported by
 NSF Grants OAC-1916805 (CINES) and CMMI-1916670 (CRISP 2.0),
-University of Virginia Strategic Investment Fund awardnumber SIF160.
+University of Virginia Strategic Investment Fund award
+number SIF160.
 }
 }
 
