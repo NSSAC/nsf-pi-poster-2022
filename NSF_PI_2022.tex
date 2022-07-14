@@ -254,21 +254,36 @@ linewidth=2pt % Width of the border lines around content boxes
 \end{minipage}
 \vspace*{0.2in}
 }
-\headerbox{Get Involved}
-          {name=contri,column=0,row=1 ,below=network}{
-\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-\item We are looking for
-\begin{itemize}
-\item Data collection tools
-\item Data on networks
-\item Apps to build and analyze networks
-\end{itemize}
-\item Contributors given full credit in system.
+
+
+\headerbox{Available Tasks}
+          {name=services,column=0,row=1 ,below=network}{
+\begin{minipage}[t]{0.48 \textwidth}
+%\textbf{Implemented} ($\approx$ 200 total)   \smallskip
+\textcolor{blue}{\textbf{Implemented ($\approx$ 200 total)}}
 \medskip
-\item Questions?~ \textcolor{green}
-        {\textbf{\texttt{net.science@virginia.edu}}}
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+    \item SNAP  \smallskip
+    \item CSonNet   \smallskip 
+    \item Plotting  \smallskip
+    \item Apps to build networks  \smallskip
+    \item Dynamical systems analyses
 \end{itemize}
-\vspace*{0.1in}
+\end{minipage}
+\quad
+\begin{minipage}[t]{0.48 \textwidth}
+%\textbf{In progress}
+\textcolor{blue}{\textbf{In Progress}}\
+  \medskip
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+    \item NetworkX    \smallskip
+    \item Reliability polynomials    \smallskip
+    \item SAT solvers    \smallskip
+    \item Anomaly detection     \smallskip
+    \item Apps to build networks    \smallskip
+\end{itemize}
+\end{minipage}
+%\vspace*{0.1in}
 }
 
 %%%%%%%%%% Begin Column 1 %%%%%%%%%%
@@ -316,7 +331,7 @@ linewidth=2pt % Width of the border lines around content boxes
 
 }
 
-\headerbox{SciDuct}
+\headerbox{Infrastructure (SciDuct)}
           {name=sciduct,column=1,row=1,below=sysViews}{
           
 %\includegraphics[scale=0.27]{figures/sciduct.png}
@@ -361,26 +376,44 @@ Job Service
 }
 
 
-\headerbox{Containerization}
-          {name=contain,column=1,row=2,below=sciduct}{
-          
-% \includegraphics[scale=0.3]{figures/sciduct.png}
-%something on containerization
-\begin{minipage}{.5\textwidth}
+%\headerbox{Containerization}
+%          {name=contain,column=1,row=2,below=sciduct}{
+%          
+%% \includegraphics[scale=0.3]{figures/sciduct.png}
+%%something on containerization
+%\begin{minipage}{.5\textwidth}
+%\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+%\item Well-defined code invocations\newline from different environments \smallskip
+%\item Portable \smallskip
+%\item Self contained \smallskip
+%\item Secure
+%\end{itemize}
+%\end{minipage}
+%\hfill
+%\begin{minipage}{.5\textwidth}
+%\begin{center}
+%\includegraphics[scale=0.22, trim = 0in 2.77in 0in 0in, clip]{figures/container_figure_v02.png}
+%\end{center}
+%\end{minipage}
+%} 
+
+\headerbox{Get Involved}
+          {name=contri,column=1,row=2 ,below=sciduct}{
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-\item Well-defined code invocations\newline from different environments \smallskip
-\item Portable \smallskip
-\item Self contained \smallskip
-\item Secure
+\item We are looking for
+\begin{itemize}
+\item Data collection tools
+\item Data on networks
+\item Apps to build and analyze networks
 \end{itemize}
-\end{minipage}
-\hfill
-\begin{minipage}{.5\textwidth}
-\begin{center}
-\includegraphics[scale=0.22, trim = 0in 2.77in 0in 0in, clip]{figures/container_figure_v02.png}
-\end{center}
-\end{minipage}
-} 
+\item Contributors given full credit in system.
+\medskip
+\item Questions?~ \textcolor{green}
+        {\textbf{\texttt{net.science@virginia.edu}}}
+\end{itemize}
+\vspace*{0.1in}
+}
+
 
 %%%%%%%%%% Begin Column 2 %%%%%%%%%%
 
@@ -453,26 +486,35 @@ Job Service
 \textcolor{blue}{\large\textbf{Outputs}}
 \end{center}
 
+
+Graph Visualizations
+
 \begin{minipage}{0.3\linewidth}
 % Graph:  nodes and edges are those of graph
-Uncontracted graph
-
-\includegraphics[scale=0.3]{figures/graph_nodes.pdf} 
-\end{minipage}
-\hfill
-\begin{minipage}{0.3\linewidth}
-
-Contracted graph
-% Graph:  nodes are communities and edges are between communities
-
+%Uncontracted graph
+%\includegraphics[scale=0.3]{figures/graph_nodes.pdf} 
+%Contracted~graph
 \includegraphics[scale=0.3]{figures/graph_community.pdf} 
+
 \end{minipage}
 \hfill
 \begin{minipage}{0.3\linewidth}
 
-Client-side rendering
+%Contracted graph
+%\includegraphics[scale=0.3]{figures/graph_community.pdf} 
+%Uncontracted graph
+\hspace*{-0.25in}
+\includegraphics[scale=0.3]{figures/graph_nodes.pdf}
+%\includegraphics[scale=0.06]{figures/gnm-25-100_pngraph.png} 
 
-\includegraphics[scale=0.06]{figures/gnm-25-100_pngraph.png} 
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\linewidth}
+
+%Client-side rendering
+
+\includegraphics[trim = -4.0in 0in 0in 0in, clip, scale=0.06]{figures/gnm-25-100_pngraph.png} 
+
 \end{minipage}
 
 %\vspace{5mm}
