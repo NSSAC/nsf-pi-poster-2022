@@ -135,7 +135,7 @@ linewidth=2pt % Width of the border lines around content boxes
 \end{tabular}
 %\end{center}
 }
-{\textbf{CINES:~ A~ CyberInfrastructure~ for~ Network~ Engineering~ and~ Science} \\
+{\textbf{CINES:~ A~ \underline{C}yber\underline{I}nfrastructure~ for~ \underline{N}etwork~ \underline{E}ngineering~ and~ \underline{S}cience} \\
             % \vspace{0.25em}
  % Poster title
 \vspace{-3mm}
@@ -147,7 +147,7 @@ linewidth=2pt % Width of the border lines around content boxes
            \textcolor{magenta}{%\normalsize
                {\textbf{\Large{NSF Cyberinfrastructure for Sustained Scientific Innovation (CSSI) Principal Investigator Meeting,~ July 2022}}}} \\
                \vspace{2.5mm}
-                 \textbf{\Large{\textcolor{magenta}{\underline{https://net.science}}}}            
+                 \textbf{\Large{\textcolor{magenta}{\texttt{\underline{https://net.science}}}}}            
             } }% Author names and institution
             
 { 
@@ -192,7 +192,7 @@ linewidth=2pt % Width of the border lines around content boxes
 \end{minipage}
 
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-\item Cyberinfrastructure (CI)
+\item Cyberinfrastructures (CIs)
 	\begin{itemize}
 	\item Network operations are similar across domains
 	\item No existing general purpose network focused CI
@@ -556,38 +556,49 @@ Job provenance
 \headerbox{Computational Tasks}
           {name=tasks,column=3,row=0}{
 
+\vspace*{-0.01in}
+
 \begin{center}
 \textcolor{blue}{\large\textbf{User Applications: Example CSonNet}}
 \end{center}
 
+\vspace*{-0.15in}
+
+
 \begin{minipage}{0.5\linewidth}
 \centering
-\includegraphics[scale=0.16]{figures/astroph_threshold_cs.pdf} 
+\includegraphics[trim = 0in 0in 0in 0.4in, clip, scale=0.16]{figures/astroph_threshold_cs.pdf} 
 \end{minipage}
 \hfill
 \begin{minipage}{0.5\linewidth}
 \centering
-\includegraphics[scale=0.6]{figures/clustering_seed.pdf} 
+\includegraphics[trim = 0in 0in 0in 0.2in, clip, scale=0.6]{figures/clustering_seed.pdf} 
 \end{minipage}
-\hfill
-\begin{minipage}{0.5\linewidth}
-\includegraphics[scale=0.27]{figures/danville_asym_interaction_100ns_fraction_cum_errorbar.eps} 
-\end{minipage}
-\vspace{5mm}
-\hfill
-\begin{minipage}{0.48\linewidth}
-\includegraphics[scale=0.27]{figures/danville_no_interaction_100ns_fraction_cum_errorbar.eps} 
-\end{minipage}
+%\hfill
+%\begin{minipage}{0.5\linewidth}
+%\includegraphics[scale=0.27]{figures/danville_asym_interaction_100ns_fraction_cum_errorbar.eps} 
+%\end{minipage}
+%\vspace{5mm}
+%\hfill
+%\begin{minipage}{0.48\linewidth}
+%\includegraphics[scale=0.27]{figures/danville_no_interaction_100ns_fraction_cum_errorbar.eps} 
+%\end{minipage}
+
+
 %	\begin{itemize}
 %	\item CSONNET (Graph Seeding, Plotting)
 %	\item Structural Analysis
 %	\item Graph Generation
 %	\end{itemize}
+
+\vspace*{-0.2in}
+
+
 \begin{center}
 \textcolor{blue}{\large\textbf{Common Services: Example Graph Transformations}}
 \end{center}
 \begin{center}
-\includegraphics[scale=0.5]{figures/star_trans.pdf}
+\includegraphics[scale=0.4]{figures/star_trans.pdf}
 \end{center}
 
 \hfill
@@ -601,8 +612,69 @@ Job provenance
 
 }
 
+
+\headerbox{Outreach and System Usage}
+          {name=outreach,column=3,row=2, below=tasks}{
+\begin{minipage}[t]{0.48 \textwidth}
+%\textbf{Implemented} ($\approx$ 200 total)   \smallskip
+\textcolor{blue}{\textbf{System Demos}}
+\medskip
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+    \item 3 ACM/IEEE conferences  \smallskip
+    \item 2 graduate courses   \smallskip 
+    \item 1 undergraduate course  \smallskip
+    \item 2 short courses  \smallskip
+    \item 1 C4GC undergraduate program  \smallskip
+    \item \textcolor{red}{XXXX} other 
+\end{itemize}
+\end{minipage}
+\quad
+\begin{minipage}[t]{0.48 \textwidth}
+%\textbf{In progress}
+\textcolor{blue}{\textbf{Course Use}}\
+  \medskip
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+    \item 2 graduate network science    \smallskip
+    \item 1 undergraduate algorithms   \smallskip
+    \item 1 short course network science   \smallskip
+    \item \textcolor{magenta}{1 systems course}  \smallskip
+    \item \textcolor{magenta}{1 security short course}  \smallskip
+    \item \textcolor{magenta}{1 databases}  \smallskip
+    \item \textcolor{magenta}{1 Data Science Capstone}
+\end{itemize}
+\end{minipage}\\
+\quad
+%
+\begin{minipage}[t]{0.48 \textwidth}
+\textcolor{blue}{\textbf{Usage Statistics}}
+\medskip
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+    \item 3 ACM/IEEE conferences  \smallskip
+    \item 2 graduate courses   \smallskip 
+    \item 1 undergraduate course  \smallskip
+    \item 2 short courses  \smallskip
+    \item 1 C4GC undergraduate program
+\end{itemize}
+\end{minipage}
+\quad
+\begin{minipage}[t]{0.48 \textwidth}
+%\textbf{In progress}
+\textcolor{blue}{\textbf{Course Use}}\
+  \medskip
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+    \item 2 graduate network science    \smallskip
+    \item 1 undergraduate algorithms   \smallskip
+    \item 1 short course network science   \smallskip
+    \item \textcolor{magenta}{1 systems course}  \smallskip
+    \item \textcolor{magenta}{1 security short course}
+    \item \textcolor{magenta}{1 databases}
+\end{itemize}
+\end{minipage}
+}
+
+
 \headerbox{Acknowledgments}
-          {name=Ack,column=3,row=2,below=tasks}{
+          {name=Ack,column=3,row=3,below=outreach}{
 {\footnotesize
 This work was supported by
 NSF Grants OAC-1916805 (CINES) and CMMI-1916670 (CRISP 2.0),
@@ -612,7 +684,7 @@ number SIF160.
 }
 
 \headerbox{Contact Persons}
-          {name=Contact,column=3,row=3,below=Ack}{
+          {name=Contact,column=3,row=4,below=Ack}{
 {\footnotesize
 {Madhav V. Marathe~ (\textcolor{green}{\textbf{\texttt{marathe@virginia.edu}}})}\\
 {Chris J. Kuhlman~ (\textcolor{green}{\textbf{\texttt{cjk8gx@virginia.edu}}})}
