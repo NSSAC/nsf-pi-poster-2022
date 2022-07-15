@@ -135,7 +135,9 @@ linewidth=2pt % Width of the border lines around content boxes
 \end{tabular}
 %\end{center}
 }
-{\textbf{CINES:~ A~ \underline{C}yber\underline{I}nfrastructure~ for~ \underline{N}etwork~ \underline{E}ngineering~ and~ \underline{S}cience} \\
+%{\textbf{CINES:~ A~ \underline{C}yber\underline{I}nfrastructure~ for~ \underline{N}etwork~ \underline{E}ngineering~ and~ \underline{S}cience} \\
+{\textbf{CINES:~ A~ Scalable~ \underline{C}yber\underline{I}nfrastructure~ 
+   for~ Sustained~ Innovation~ in \underline{N}etwork~ \underline{E}ngineering~ and~ \underline{S}cience} \\
             % \vspace{0.25em}
  % Poster title
 \vspace{-3mm}
@@ -176,7 +178,7 @@ linewidth=2pt % Width of the border lines around content boxes
 
 \headerbox{Motivation}
           {name=motive,column=0,row=0}{
-
+{\small
 \begin{minipage}{.73\textwidth}
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
 \item Networks
@@ -204,8 +206,8 @@ linewidth=2pt % Width of the border lines around content boxes
 	\end{itemize}
 	\end{itemize}
 \end{itemize}
-\vspace*{0.2in}
-}
+%\vspace*{0.2in}
+}}
 
 \headerbox{System Description}
           {name=system,column=0,row=1,below=motive}{
@@ -226,7 +228,7 @@ linewidth=2pt % Width of the border lines around content boxes
 \includegraphics[scale=0.22]{figures/sys_descr.png}
 \end{center}
 \end{minipage}
-\vspace*{0.2in}
+%\vspace*{0.2in}
 }
 
 \headerbox{Networks}
@@ -252,7 +254,7 @@ linewidth=2pt % Width of the border lines around content boxes
 \includegraphics[scale=0.35]{figures/multi_net.png}
 %\captionof{figure}{Multiplex Network\label{multiplex}}
 \end{minipage}
-\vspace*{0.2in}
+%\vspace*{0.2in}
 }
 
 
@@ -285,6 +287,13 @@ linewidth=2pt % Width of the border lines around content boxes
 \end{minipage}
 %\vspace*{0.1in}
 }
+
+\headerbox{Contact Persons}
+          {name=Contact,column=0,row=4,below=services}{
+{\footnotesize
+{Madhav V. Marathe~ (\textcolor{green}{\textbf{\texttt{marathe@virginia.edu}}})}\\
+{Chris J. Kuhlman~ (\textcolor{green}{\textbf{\texttt{cjk8gx@virginia.edu}}})}
+}}
 
 %%%%%%%%%% Begin Column 1 %%%%%%%%%%
 
@@ -411,7 +420,7 @@ Job Service
 \item Questions?~ \textcolor{green}
         {\textbf{\texttt{net.science@virginia.edu}}}
 \end{itemize}
-\vspace*{0.1in}
+\vspace*{0.2in}
 }
 
 
@@ -549,9 +558,10 @@ Job provenance
 %\includegraphics[scale=0.08]{figures/provenance.png} 
 \includegraphics[trim = 0in 0in 10in 0in, clip, scale=0.08]{figures/provenance.png}
 \end{minipage}
-
-
+\vspace*{0.1in}
 }
+
+%%%%% Begin Column 3
 
 \headerbox{Computational Tasks}
           {name=tasks,column=3,row=0}{
@@ -623,25 +633,26 @@ Job provenance
 \medskip
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
     \item 3 ACM/IEEE conferences  \smallskip
-    \item 2 graduate courses   \smallskip 
-    \item 1 undergraduate course  \smallskip
-    \item 2 short courses  \smallskip
-    \item 1 C4GC undergraduate program  \smallskip
-    \item \textcolor{red}{XXXX} other 
+    \item 2 Graduate courses   \smallskip 
+    \item 1 Undergraduate course  \smallskip
+    \item 2 Short courses  \smallskip
+    \item 1 Undergraduate summer\newline program (C4GC)  \smallskip
+    \item 1 Program for high school\newline students 
+          (Achievable Dream) %\textcolor{red}{XXXX} other 
 \end{itemize}
 \end{minipage}
 \quad
 \begin{minipage}[t]{0.48 \textwidth}
 %\textbf{In progress}
-\textcolor{blue}{\textbf{Course Use}}\
+\textcolor{blue}{\textbf{Course Use (Current \& Future)}}\
   \medskip
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-    \item 2 graduate network science    \smallskip
-    \item 1 undergraduate algorithms   \smallskip
-    \item 1 short course network science   \smallskip
-    \item \textcolor{magenta}{1 systems course}  \smallskip
-    \item \textcolor{magenta}{1 security short course}  \smallskip
-    \item \textcolor{magenta}{1 databases}  \smallskip
+    \item 2 Graduate (Network Science)    \smallskip
+    \item 1 Undergraduate (Algorithms)   \smallskip
+    \item 1 Short course (Network Science)   \smallskip
+    \item \textcolor{magenta}{1 Systems course}  \smallskip
+    \item \textcolor{magenta}{1 Security short course}  \smallskip
+    \item \textcolor{magenta}{1 Database}  \smallskip
     \item \textcolor{magenta}{1 Data Science Capstone}
 \end{itemize}
 \end{minipage}
@@ -665,8 +676,9 @@ Job provenance
 \textcolor{blue}{\textbf{Feedback}}\
   \medskip
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-    \item ``Lowers the barriers to do network science'' attendee at WebScience 2021 conference    \smallskip
-    \item ``It is good to have all tools in one place'' (researcher after a demo)
+    \item ``Lowers the barriers to do network science'' 
+     (Attendee at\newline WebScience 2021 conference)    \smallskip
+    \item ``It is good to have all tools in one place'' (Researcher after a demo)
 \end{itemize}
 \end{minipage}
 }
@@ -676,18 +688,25 @@ Job provenance
           {name=Ack,column=3,row=3,below=outreach}{
 {\footnotesize
 This work was supported by
-NSF Grants OAC-1916805 (CINES) and CMMI-1916670 (CRISP 2.0),
+NSF Grants OAC-1916805 (CINES),\newline
+CCF-1918656 (Expeditions) and CMMI-1916670 (CRISP 2.0),
+and\newline 
 University of Virginia Strategic Investment Fund award
 number SIF160.
 }
 }
 
+\iffalse
+%%%%%%%%%%%%%%%%%%%%%
+%%%% Moved to Column 0 for space reasons.
 \headerbox{Contact Persons}
           {name=Contact,column=3,row=4,below=Ack}{
 {\footnotesize
 {Madhav V. Marathe~ (\textcolor{green}{\textbf{\texttt{marathe@virginia.edu}}})}\\
 {Chris J. Kuhlman~ (\textcolor{green}{\textbf{\texttt{cjk8gx@virginia.edu}}})}
 }}
+%%%%%%%%%%%%%%%%%%%%%
+\fi
 
 \end{poster}
 
