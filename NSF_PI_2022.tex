@@ -157,7 +157,8 @@ linewidth=2pt % Width of the border lines around content boxes
 %\centering
 \includegraphics[scale=0.4]{logos/stanford.png} &
 \includegraphics[scale=0.4]{logos/vt.png} \\
-\includegraphics[scale=0.4]{logos/ncatnt.png} 
+\includegraphics[scale=0.4]{logos/ncatnt.png} &
+\includegraphics[trim = 3.7in 3.in 6in 3in, clip, scale=0.5]{logos/network-repos-logo.png} \\
 % &
 %\includegraphics[scale=0.4]{logos/iu.png} \\
 %\centering
@@ -212,7 +213,7 @@ linewidth=2pt % Width of the border lines around content boxes
 \headerbox{System Description}
           {name=system,column=0,row=1,below=motive}{
 
-\begin{minipage}{.5\textwidth}
+\begin{minipage}{.4\textwidth}
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
 \item Open access/Open source cyberinfrastructure \smallskip
 \item General purpose network science \smallskip
@@ -223,9 +224,10 @@ linewidth=2pt % Width of the border lines around content boxes
 \end{itemize}
 \end{minipage}
 \hfill
-\begin{minipage}{.5\textwidth}
+\begin{minipage}{.60\textwidth}
 \begin{center}
-\includegraphics[scale=0.22]{figures/sys_descr.png}
+%\includegraphics[scale=0.22]{figures/sys_descr.png}
+\includegraphics[scale=0.195]{figures/CINES_HOME_OVERVIEW-legacy.pdf}
 \end{center}
 \end{minipage}
 %\vspace*{0.2in}
@@ -265,10 +267,10 @@ linewidth=2pt % Width of the border lines around content boxes
 \textcolor{blue}{\textbf{Implemented ($\approx$ 200 total)}}
 \medskip
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-    \item SNAP  \smallskip
-    \item CSonNet   \smallskip 
+    \item SNAP (all methods)  \smallskip
+    \item CSonNet (simulation)  \smallskip 
     \item Plotting  \smallskip
-    \item Apps to build networks  \smallskip
+    \item Network generation methods  \smallskip
     \item Dynamical systems analyses
 \end{itemize}
 \end{minipage}
@@ -282,7 +284,7 @@ linewidth=2pt % Width of the border lines around content boxes
     \item Reliability polynomials    \smallskip
     \item SAT solvers    \smallskip
     \item Anomaly detection     \smallskip
-    \item Apps to build networks    \smallskip
+    \item Construct specialty networks    \smallskip
 \end{itemize}
 \end{minipage}
 %\vspace*{0.1in}
@@ -335,7 +337,8 @@ linewidth=2pt % Width of the border lines around content boxes
 \qquad
 \begin{minipage}{.73\textwidth}
 \vspace{5mm}
-\includegraphics[scale=0.20]{figures/netsci_ops_v6.pdf}
+% \includegraphics[scale=0.20]{figures/netsci_ops_v6.pdf}
+\includegraphics[scale=0.20]{figures/netsci_ops_v7.pdf}
 \end{minipage}
 
 }
@@ -582,7 +585,8 @@ Job provenance
 \hfill
 \begin{minipage}{0.5\linewidth}
 \centering
-\includegraphics[trim = 0in 0in 0in 0.2in, clip, scale=0.6]{figures/clustering_seed.pdf} 
+%\includegraphics[trim = 0in 0in 0in 0.2in, clip, scale=0.6]{figures/clustering_seed.pdf} 
+\includegraphics[trim = 0in 0in 0in 0.2in, clip, scale=0.16]{figures/pref_cs.pdf} 
 \end{minipage}
 %\hfill
 %\begin{minipage}{0.5\linewidth}
@@ -644,7 +648,7 @@ Job provenance
 \quad
 \begin{minipage}[t]{0.48 \textwidth}
 %\textbf{In progress}
-\textcolor{blue}{\textbf{Course Use (Current \& Future)}}\
+\textcolor{blue}{\textbf{Course Use (Current \&}} \textcolor{magenta}{\textbf{Future}} \textcolor{blue}{\textbf{)}} 
   \medskip
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
     \item 2 Graduate (Network Science)    \smallskip
@@ -665,9 +669,9 @@ Job provenance
 \textcolor{blue}{\textbf{Usage Statistics}}
 \medskip
 \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
-    \item xxx users  \smallskip
-    \item yyy jobs run \smallskip
-    \item \textcolor{red}{what other user metrics}   \smallskip 
+    \item Approx 200 users  \smallskip
+    \item Approx 5000 jobs run \smallskip
+    \item Approx 1500 networks  
 \end{itemize}
 \end{minipage}
 \quad
